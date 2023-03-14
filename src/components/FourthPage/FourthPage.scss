@@ -1,0 +1,60 @@
+@import "../styles/slyles.scss";
+
+.fourth_page_container {
+    display: flex;
+    height: 825px;
+    scroll-snap-align: start;
+
+    .page_title {
+        @include font("Overlock", 700, 100px);
+        color: $color-blue;
+        height: 0px;
+        left: 119px;
+        letter-spacing: 0.017em;
+        line-height: 80px;
+        position: relative;
+        text-align: right;
+        top: 284px;
+        width: 0px;
+    }
+
+    .big_shoe_png {
+        height: 0px;
+        left: 455px;
+        position: relative;
+        top: 156px;
+        width: 0px;
+        transform: translateX(-50%);
+        opacity: 0;
+        
+    }
+
+    .big_shoe_png_animation {
+        animation-name: bounce;
+        animation-duration: 1.8s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+      }
+      
+    @keyframes bounce {
+    0% {
+        transform: translateY(-500px) translateX(-400px) rotate(-70deg);
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+    }
+
+    .comments_container {
+        height: 0px;
+        position: relative;
+        width: 0px;
+        top: 100px;
+    }
+
+    .comments_container_slide_up {
+        transform: translateY(-100px); 
+        transition: transform 1.5s ease-in-out;
+}
+}

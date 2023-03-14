@@ -1,0 +1,53 @@
+[   
+    {
+       "id": 1,
+       "title": "Eco-friendly",
+       "icon": "♻️",
+       "content": "Being vegan, Schews have less carbon foot print, & the packaging is 100% recyclable.",
+       "style": {
+            "background": "#FFB13B",
+            "left": "628px", 
+            "top": "90px",
+            "width": "520px",
+            "zIndex": 100
+        }
+    },
+    {
+        "id": 2,
+        "title": "No stress",
+        "icon": "😅",
+        "content": "While your dog is having fun chewing Schews, you don’t need to worry about your shoes.",
+        "style": {
+            "background": "#2DA6B1",
+            "left": "820px", 
+            "top": "315px",
+            "zIndex": 200
+        }
+    },
+    {
+        "id": 3,
+        "title": "Natural",
+        "icon": "🍃",
+        "content": "100% natural vegan formula with low-calorie superfoods",
+        "style": {
+            "background": "#467027",
+            "left": "615px", 
+            "top": "502px",
+            "zIndex": 100
+        }
+    },
+    {
+        "id": 4,
+        "title": "Healthy",
+        "icon": "🦷",
+        "content": "Keep your dog’s teeth clean & help to maintain a healthy weight, boost energy levels, & reduce allergies.",
+        "style": {
+            "background": "#EF4238",
+            "left": "154px", 
+            "top": "415px",
+            "paddingTop": "24px",
+            "height": "246px",
+            "zIndex": 50
+        }
+    }
+]

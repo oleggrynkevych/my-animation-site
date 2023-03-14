@@ -1,0 +1,111 @@
+@import "../styles/slyles.scss";
+
+.second_page_container {
+    background: $color-purple;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: inline-flex;
+
+    .main_text_container {
+        @include font ("Overlock", 700, 100px);
+        color: white;
+        letter-spacing: 0.017em;
+        line-height: 80px;
+        text-transform: uppercase;
+        width: 389px;
+        padding-top: 278px;
+        padding-left: 118px;
+    }
+
+    .main_content_animation {
+        animation-name: slide_up;
+        animation-duration: 1.3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+
+    @keyframes slide_up {
+        from {
+            transform: translateY(170px);
+        }
+        to {
+            
+        }
+      }
+
+    
+    .main_content {
+        display: block;
+        padding-left: 110px;
+        width: 703px;
+
+        .first_comment {
+            display: inline-flex;
+            padding-top: 160px;
+
+            .first_content_image {
+                position: relative;
+            }
+    
+            .first_content_comment {
+                @include font ("Inter", none, 22px);
+                background: white;
+                border-radius: 100px;
+                color: $color-blue;
+                height: 51px;
+                justify-content: center;
+                left: -52px;
+                line-height: 220%;
+                position: absolute;
+                text-align: center;
+                top: -15px;
+                width: 200px;
+                z-index: 2;
+            }
+
+            .first_content_text {
+                @include font ("Inter", 400, 30px);
+                color: white;
+                line-height: 140%;
+                margin-left: 64px;
+                align-items: center;
+                display: flex;
+            }
+        }
+
+        .second_comment {
+            display: inline-flex;
+            padding-left: 75px;
+            padding-top: 48px;
+
+            .second_content_image {
+                margin-left: 64px;
+                position: relative;
+            }
+
+            .second_content_text {
+                @include font ("Inter", 400, 30px);
+                align-items: center;
+                color: white;  
+                display: flex;
+                line-height: 140%;
+                width: 314px;
+            }
+
+            .second_content_comment {
+                @include font ("Inter", 400, 22px);
+                background: white;
+                border-radius: 100px;
+                bottom: -19px;
+                color: $color-blue;
+                height: 51px;
+                left: 10px;
+                line-height: 220%;
+                position: absolute;
+                text-align: center;
+                width: 136px;
+            }
+        }
+    }
+}

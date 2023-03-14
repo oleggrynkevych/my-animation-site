@@ -1,0 +1,153 @@
+@import "../styles/slyles.scss";
+
+@mixin header_button_styles ($w, $h, $bc, $br, $back, $c) {
+    @include font ("Inter", 600, 16px);
+    background: $back;
+    border-radius: $br;
+    border: 2px solid $bc;
+    color: $c;
+    height: $h;
+    width: $w;
+}
+
+%header_position {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    @extend %header_position;
+    @include font ("Inter", 700, 16px);
+    color: $color-blue;
+    height: 65px;
+    padding: 0 25px;
+    position: sticky;
+    top: 0;
+    width: auto;
+    z-index: 20;
+}
+
+.header_scroll{
+    color: white;
+
+    .header_right_block_select{
+        color:white;
+    }
+
+    .header_right_block_button_login{
+        @include header_button_styles (80px, 100%, white, 100px, none, white);
+    }
+
+    .header_right_block_button_signup{
+        @include header_button_styles (91px, 100%, white, 100px, white, $color-purple);
+    }
+
+    .header_right_block_icon {
+            background-image: url("../../images/iconBagScroll.png");
+            background-repeat: no-repeat;
+            background-color: transparent;
+            margin-top: 3px;
+        }
+
+    .icon_bag {
+        opacity: 0;
+    }
+
+    .header_logo {
+        background-image: url("../../images/logoScroll.png");
+        background-repeat: no-repeat;
+        background-color: transparent;
+
+        img {
+            opacity: 0;
+        }
+    }
+
+    .navigation ul :hover{
+        color:$color-blue;
+    }
+
+    .header_right_block_button_login:hover{
+        border: 2px solid $color-blue;
+        color: $color-blue;
+    }
+
+    .header_right_block_button_signup:hover {
+        background-color: $color-blue;
+        border: 2px solid $color-blue;
+    }
+}
+
+
+.navigation {
+    width: 366px;
+    height: 15px;
+    
+}
+
+.navigation ul{
+    @extend %header_position;
+    list-style-type: none;
+}
+
+.navigation ul :hover{
+    color:$color-purple;
+}
+
+.header_logo{
+    display: flex;
+    align-items: center;
+}
+
+.header_right_block{
+    display: flex;
+    height: 32px;
+    justify-content: space-between;
+    width: 329px;
+}
+
+.header_right_block_select{
+    @include font ("Inter", 600, 16px);
+    border: none;
+    color: $color-blue;
+    background-color: transparent;
+    line-height: 100%;
+    margin-left: 13px;
+}
+
+
+.header_right_block_icon{
+    display: flex;
+    align-items: center;
+}
+
+.header_right_block_buttons {
+    width: 181px;
+    @extend %header_position;
+}
+
+.header_right_block_button_login{
+    @include header_button_styles (80px, 100%, $color-blue, 100px, none, $color-blue);
+}
+
+.header_right_block_button_login:hover{
+    border: 2px solid $color-purple;
+    color: $color-purple;
+}
+
+.header_right_block_button_signup{
+    @include header_button_styles (91px, 100%, $color-blue, 100px, $color-blue, white);
+}
+
+.header_right_block_button_signup:hover {
+    background-color: $color-purple;
+    border: 2px solid $color-purple;
+}
+

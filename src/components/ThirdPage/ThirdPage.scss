@@ -1,0 +1,172 @@
+@import "../styles/slyles.scss";
+
+.third_page_container {
+    background: $color-purple;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+
+    .text_container {
+        padding-left: 120px;
+        padding-top: 310px;
+    }
+
+    .text_container_animation{
+        animation-name: slide_up;
+        animation-duration: 1.3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+
+    @keyframes slide_up {
+        from {
+            transform: translateY(100px);
+        }
+        to {
+        }
+      }
+
+    .page_title {
+        @include font("Inter", 700, 13px);
+        background: white;
+        border-radius: 100px;
+        color: $color-purple;
+        display: flex;
+        line-height: 140%;
+        padding: 5px 10px;
+        width: fit-content;
+    }
+
+    .first_paragraph {
+        @include font("Inter", 400, 30px);
+        color: white;
+        line-height: 140%;
+        margin-top: 16px;
+        width: 483px;
+    }
+
+    .second_paragraph {
+        @include font("Inter", 400, 16px);
+        color: white;
+        line-height: 140%;
+        margin-top: 50px;
+        opacity: 0.6;
+        width: 324px;
+    }
+
+    .green_shoe {
+        height: 94px;
+        left: 1228px;
+        position: absolute;
+        top: 127px;
+        width: 107px;
+    }
+
+    .red_heel {
+        height: 406px;
+        left: 681px;
+        position: absolute;
+        top: 180px;
+        width: 387px;
+        opacity: 0;
+    }
+
+    .orange_shoe {
+        height: 105px;
+        left: 1228px;
+        position: absolute;
+        top: 654px;
+        width: 107px;
+    }
+
+    .shoe_animation {
+        animation-name: scale_shoe;
+        animation-duration: 1.3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+
+    @keyframes scale_shoe {
+        from {
+            transform: scale(0.7);
+            opacity: 1;
+        }
+        to {
+            opacity: 1;
+        }
+      }
+
+    .big_half_ellipse {
+        box-sizing: border-box;
+        left: 1215px;
+        position: absolute;
+        top: 198px;
+        z-index: 100;
+    }
+
+    .small_half_ellipse {
+        box-sizing: border-box;
+        height: 100px;
+        left: 1390px;
+        position: absolute;
+        top: 348px;
+        width: 55px;
+        z-index: 100;
+    }
+
+    .first_circle {
+        background-color: white;
+        border-radius: 50%;
+        height: 30px;
+        left: 1305px;
+        position: absolute;
+        top: 221px;
+        width: 30px;
+    }
+
+    .second_circle {
+        @include font("Overlock", 1000, 50px);
+        background-color: white;
+        border-radius: 50%;
+        color: $color-purple;
+        height: 106px;
+        left: 1162px;
+        line-height: 106px;
+        position: absolute;
+        text-align: center;
+        top: 370px;
+        width: 106px;
+        z-index: 150;
+    }
+
+    .third_circle {
+        background-color: white;
+        border-radius: 50%;
+        height: 30px;
+        left: 1305px;
+        position: absolute;
+        top: 600px;
+        width: 30px;
+    }
+
+    .circle_text_container {
+        left: 1295px;
+        position: absolute;
+        top: 484px;
+        transform: rotate(258deg);
+
+        span {
+            @include font("Inter", 400, 10px);
+            align-items: center;
+            color: white;
+            display: flex;
+            height: 200px;
+            letter-spacing: 0.1em;
+            line-height: 140%;
+            overflow: hidden;
+            position: absolute;
+            transform-origin: bottom center;
+            width: 20px;
+        }
+    }
+}
